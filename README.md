@@ -1,4 +1,4 @@
-# RD-SW
+# RetroInjector
 
 This is a modified inject.sh from [RetroDECK/Components](https://github.com/RetroDECK/Components) to allow component injection into existing RetroDeck installations without needing to rebuild the flatpak. 
 
