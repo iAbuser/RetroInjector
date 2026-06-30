@@ -1,35 +1,41 @@
 # RetroInjector
 
-This is a modified inject.sh from [RetroDECK/Components](https://github.com/RetroDECK/Components) to allow component injection into existing RetroDeck installations without needing to rebuild the flatpak. 
+This is a modified inject.sh from [RetroDECK/Components](https://github.com/RetroDECK/Components) to allow component injection into an existing RetroDeck installation on your SteamDeck.
 
-## Documentation
+## Instructions
+* Ensure RetroDeck is installed (Confirmed working on the current latest version 0.10.9b) - If a new install, run through the whole setup/install first
+* Download this Github's zip to your SteamDeck and extract it somewhere like your desktop
+* Source your own archive file in "*-linux_x64.tar.gz" format and place it in the component folder next to the "component_" files
+* Right click the inject.sh file and allow execution
+* Launch terminal in this folder and run the following command: ./inject.sh 
+* It should now inject your component and work like it never left...
 
-This iterates through all folders in the root directory of this script and attempts to inject the components. 
-It includes a template...
+## How it works
+Searches strictly for a "*-linux_x64.tar.gz" archive in your component folders and extracts everything from its "publish" folder into your component/bin folder that it creates
 
-Instructions:
-Download this Github's zip to your SteamDeck and extract it somewhere like your desktop
-Source your own archive file in "*-linux_x64.tar.gz" format and place it in the component folder next to the "component_" files.
-Right click the inject.sh file and allow execution. Maybe do it for the folder as well.
-Launch terminal in the directory your inject.sh is and run the following command: ./inject.sh 
-It should now inject your component and work like it never left...
-
-How it works:
-Searches strictly for a "*-linux_x64.tar.gz" archive in your component folders and extracts everything from its "publish" folder into your component/bin folder
 Fixes permissions to ensure RetroDeck can properly launch it
+
+It copies your component folder into your RetroDeck installation folder
+
 Runs RetroDeck's reset command for the component you injected since it acts like an initializer for it
 
-Caution:
+## Caution
 This only includes soft checks and nothing to actually validate the archive or folder structure. As of June 2026, it works with the provided template as a "reference" ;)
 
 
 How to make your own component folder:
+
 The provided template is slightly modified to prevent the big issues...
+
 Look at the link below, my inject.sh file and the provided template to see how you can get it to work with other components
 
-Please visit the [How-to: Add a Component to RetroDECK - A Cooking Philosophy](https://retrodeck.readthedocs.io/en/latest/wiki_development/components/component-guide/creating-components-guide/).
+[How-to: Add a Component to RetroDECK - A Cooking Philosophy](https://retrodeck.readthedocs.io/en/latest/wiki_development/components/component-guide/creating-components-guide/).
 
+## Disclaimer
+This project does not include any archive files, nor will I provide or direct you to any source for obtaining them. You are responsible for acquiring them yourself and for ensuring you have the right to use them. You assume all responsibility and risk associated with obtaining and using those files.
 
-## I WILL NOT PROVIDE YOU WITH ANY ARCHIVE FILES OR SHOW YOU WHERE TO GET THEM FOR OBVIOUS REASONS. YOU CAN FIND THEM ON YOUR OWN. I AM JUST PROVIDING YOU WITH CONFIG FILES. 
+This project is an independent utility and is not affiliated with, endorsed by, or supported by the RetroDECK project or any of its developers.
 
-## This is not affiliated with RetroDeck and is my own little project to enjoy some stuff that was sadly removed. DO NOT go to them with issues for this. Use this at your own risk.
+Please do not contact the RetroDECK developers for support regarding this project. If you choose to use it, you do so entirely at your own risk. I make no guarantees regarding compatibility, stability, or functionality and accept no responsibility for any issues, data loss, or damages that may result from its use.
+
+### This project is intended solely as a helper for integrating a user-supplied archive into RetroDECK and does not distribute any third-party software.
