@@ -1,0 +1,73 @@
+{
+  "ryubing": {
+    "name": "Ryubing",
+    "description": "Ryubing is a Switch emulator.",
+    "url_rdwiki": "https://retrodeck.readthedocs.io/en/latest/",
+    "url_source": "https://google.com",
+    "component_type": "Emulator",
+    "system_friendly_name": "Nintendo Switch",
+    "system": "switch",
+    "compatible_presets": {
+      "abxy_button_swap": [
+        "false",
+        "true"
+      ],
+      "ask_to_exit": [
+        "false",
+        "true"
+      ]
+    },
+    "preset_actions": {
+      "config_file_format": "ryubing",
+      "ask_to_exit": [
+        {
+          "enabled_states": [ "true" ],
+          "setting_name": "show_confirm_exit",
+          "action": "change",
+          "new_setting_value": "false",
+          "section": "UI",
+          "target_file": "$ryubing_config",
+          "defaults_file": "$ryubing_rd_config_dir/Config.json"
+        }
+      ],
+      "abxy_button_swap": [
+        {
+          "enabled_states": [ "true" ],
+          "setting_name": "button_x",
+          "action": "change",
+          "new_setting_value": "Y",
+          "section": "right_joycon",
+          "target_file": "$ryubing_config",
+          "defaults_file": "$ryubing_rd_config_dir/Config.json"
+        },
+        {
+          "enabled_states": [ "true" ],
+          "setting_name": "button_y",
+          "action": "change",
+          "new_setting_value": "X",
+          "section": "right_joycon",
+          "target_file": "$ryubing_config",
+          "defaults_file": "$ryubing_rd_config_dir/Config.json"
+        },
+        {
+          "enabled_states": [ "true" ],
+          "setting_name": "button_b",
+          "action": "change",
+          "new_setting_value": "A",
+          "section": "right_joycon",
+          "target_file": "$ryubing_config",
+          "defaults_file": "$ryubing_rd_config_dir/Config.json"
+        },
+        {
+          "enabled_states": [ "true" ],
+          "setting_name": "button_a",
+          "action": "change",
+          "new_setting_value": "B",
+          "section": "right_joycon",
+          "target_file": "$ryubing_config",
+          "defaults_file": "$ryubing_rd_config_dir/Config.json"
+        }
+      ]
+    }
+  }
+}
